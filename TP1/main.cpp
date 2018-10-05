@@ -2,17 +2,12 @@
 #include "pattern.h"
 
 int main() {
-  cerr << "started processing.\n";
-  ChampionsInfo Inf;
-  cerr << "champion with id = " << 13 << " is " << Inf.getChampionById(13)
-       << endl;
-  cerr << "id of Ezreal is " << Inf.getChampionId("Ezreal") << endl;
   PatternFinder PFinder;
   cerr << "Ended processing.\n";
   vector<vector<string>> patterns;
 
   while (true) {
-    cout << "TIPO DE CONSULTA" << endl;
+    cout << "TIPO DE CONSULTA (0 - com winrate/1 - sem" << endl;
     int tipo;
     cin >> tipo;
     if (tipo) {
