@@ -19,6 +19,7 @@ int main() {
       cerr << "Digite o numero de partidas minimos que um conjunto deve "
               "estar: "
            << endl;
+
       int kpartmin, lenconj;
       cin >> kpartmin;
 
@@ -26,16 +27,7 @@ int main() {
 
       cin >> lenconj;
 
-      patterns = PFinder.subsetPattern(kpartmin, lenconj);
-
-      cerr << "Pattern kpartmin/lenconk found:\n";
-      for (int i = 0; i < patterns.size(); i++) {
-        for (int j = 0; j < patterns[i].size(); j++) {
-          cout << patterns[i][j] << " ";
-        }
-        cout << endl;
-      }
-      cerr << endl;
+      PFinder.subsetPattern(kpartmin, lenconj);
     } else {
       int knpart;
       cerr << "Digite o numero de partidas minimas a ser considerada: " << endl;
@@ -46,15 +38,7 @@ int main() {
       cerr << "Digite o tamanho do subconjunto a ser considerado: " << endl;
       int lenconj2;
       cin >> lenconj2;
-      patterns = PFinder.subsetPatternWithWinRate(knpart, kwinrate, lenconj2);
-      cerr << "Pattern 100/0.6/sz3 found:\n";
-      for (int i = 0; i < patterns.size(); i++) {
-        for (int j = 0; j < patterns[i].size(); j++) {
-          cout << patterns[i][j] << " ";
-        }
-        cout << endl;
-      }
-      cout << endl;
+      PFinder.subsetPatternWithWinRate(knpart, kwinrate, lenconj2);
     }
   }
 }
